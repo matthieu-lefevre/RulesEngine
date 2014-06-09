@@ -1,0 +1,54 @@
+expressions:
+
+  # eval expression
+  expression1:
+    expression: param6
+    variables: [param6]
+    evaluate: true
+
+  expression2:
+    expression: param7 * 10
+    variables: [param7]
+    evaluate: true
+
+  expression3:
+    expression: param7 - param8
+    variables: [param7, param8]
+    evaluate: true
+
+  expression4:
+    expression: ~
+    variables: []
+    evaluate: true
+
+  expression5:
+    expression: param6
+    variables: [param7]
+    evaluate: true
+
+  expression6:
+    expression: expression
+    variables: ~
+    evaluate: true
+
+
+  # parse expression
+  expression7:
+    expression: param7 expressions
+    variables: [param7]
+    evaluate: false
+
+  expression8:
+    expression: expression
+    variables: ~
+    evaluate: false
+
+  expression9:
+    expression: first param7 then param8
+    variables: [param7, param8]
+    evaluate: false
+
+  expression10:
+    expression: the param0 param
+    variables: [param0]
+    evaluate: false

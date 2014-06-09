@@ -1,0 +1,15 @@
+data:
+
+  # rules
+  param1: test
+  param2: 1
+  param3: test1
+
+  # conditions
+  param4: condition1
+  param5: 1
+
+  # expressions
+  param6: expression1
+  param7: 10
+  param8: 9

@@ -1,0 +1,25 @@
+conditions:
+
+  condition1:
+    variables: [param4]
+    clause: param4 eq "condition1"
+
+  condition2:
+    variables: ~
+    clause: param4 eq "condition1"
+
+  condition3:
+    variables: [param5]
+    clause: param4 eq "condition1"
+
+  condition4:
+    variables: [param5]
+    clause: param5 + 1
+
+  condition5:
+    variables: [param4]
+    clause: param4 eq "condition2"
+
+  condition6:
+    variables: [param5]
+    clause: param5 eq "condition1

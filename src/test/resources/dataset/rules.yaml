@@ -1,0 +1,89 @@
+rules:
+
+  rule1:
+    priority: 2
+    condition:
+      variables: [param1]
+      clause: param1 eq "test"
+    result:
+      expressions:
+        - expression: param2 * 100
+          variables: [param2]
+  
+  rule2:
+    priority: 1
+    condition:
+      variables: [param1]
+      clause: param1 eq "test"
+    result:
+      expressions:
+        - expression: param2 + 1
+          variables: [param2]
+  
+  rule3:
+    result:
+      expressions:
+        - expression: param2 * 5
+          variables: [param2]
+
+  rule4:
+    condition:
+      variables: [param1]
+      clause: param1 eq "test1"
+    result:
+      expressions:
+        - expression: param2 * 5
+          variables: [param2]
+
+  rule5:
+    result:
+      expressions:
+        - expression: param2 * 100
+          variables: [param2]
+          order: 2
+        - expression: param1
+          variables: [param1]
+          order: 1
+
+  rule6:
+    result:
+      expressions:
+        - expression: param2 * 100
+          variables: [param2]
+        - expression: param1
+          variables: [param1]
+
+  rule7:
+    result:
+      expressions:
+        - expression: param2 petit param1
+          variables: [param1, param2]
+          evaluate: false
+
+  rule8:
+    result:
+      expressions:
+        - expression: expression
+          evaluate: false
+
+  rule9:
+    result:
+      expressions:
+        - expression: expression
+          evaluate: true
+
+  rule10:
+    result:
+      expressions:
+        - expression: param1 * 100
+          variables: [param] 
+         
+  rule11:
+      priority: 1
+      condition:
+        variables: [param3]
+        clause: param3 eq "test1"
+      result:
+        expressions:
+          - expression: param2 + 2
+            variables: [param2]
